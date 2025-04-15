@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+.env
+
+# Arquivos de log e temporários
+*.log
+*.tmp
+*.swp
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# Arquivos de testes ou builds locais
+dist/
+build/
+*.egg-info/
+
+# SSH e segurança
+*.pem
+*.key
+*.crt
+
+# Se você usar scripts de deploy gerando arquivos locais
+*.backup
+*.bak
+*.old
+
+# Jupyter notebooks (se vier a usar)
+.ipynb_checkpoints/
