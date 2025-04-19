@@ -26,6 +26,8 @@ python scripts/deploy.py
 
 - `deploy.py`: Faz build, push e deploy remoto via SSH com Docker.
 - `health-check.py`: Verifica a saúde de endpoints listados em um arquivo .txt, registra os resultados e envia alertas para o Slack em caso de falhas.
+- `auto-restart.py`: Monitora containers Docker listados em um arquivo `.txt` e reinicia automaticamente os que estiverem com problemas.
+- `space-disk-monitoring.py`: Conecta via SSH a um servidor remoto, verifica o uso de disco com `df -h`, salva um relatório e envia alerta para o Slack se alguma partição estiver acima de 80% de uso.
 
 
 ## Exemplo de .env.example
@@ -44,4 +46,11 @@ APP_NAME=my-app
 FILE_SERVICES=scripts/services.txt
 FILE_HEALTH_REPORT=scripts/health_report.txt
 SLACK_WEBHOOK=https://hooks.slack.com/services/SEU/WEBHOOK/URL
+
+# Monitoring Containers Auto Restart
+FILE_CONTAINER_NAMES=
+FILE_RESTART_LOG=
+
+# Space disk monitoring
+FILE_DISK_REPORT=
 ```
