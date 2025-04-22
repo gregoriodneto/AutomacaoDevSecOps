@@ -5,6 +5,8 @@ Este repositório contém scripts em Python para automação de tarefas DevOps, 
 ## Estrutura
 
 - `scripts/`: Pasta com todos os scripts.
+- `multistage-build-app/`: Aplicação containerizada usando Docker multi-stage build, permitindo otimização da imagem final ao separar etapas de build e execução.
+- `nginx-app/`: Aplicação simples configurada com Nginx.
 - `.env`: Arquivo com variáveis sensíveis (NÃO subir no Git).
 - `.env.example`: Modelo de variáveis.
 - `requirements.txt`: Dependências Python.
