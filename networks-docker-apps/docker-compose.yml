@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  go-server:
+    build: ./go-server
+    container_name: go-server
+    ports:
+      - "8080:8080"
+    networks:
+      - minha-rede
+
+  python-client:
+    build: ./python-client
+    container_name: python-client
+    depends_on:
+      - go-server
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
+    driver: bridge
